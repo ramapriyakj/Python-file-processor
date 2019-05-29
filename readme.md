@@ -1,9 +1,17 @@
-Steps to run the code:
-----------------------
-1. Open two termial instances (A and B) pointing to the folder containing this file (let us say readme.md is under ~/simplaex_file_processor/)
-2. Run the following command in termial A:
+# Simplaex File Processor
+
+## Steps to run the code:
+1. Download all the files in this repository to a folder in your local machine.  
+   (let us say all the files are under **~/simplaex_file_processor/** folder).
+2. Open two terminal instances (**A** and **B**) pointing to the above mentioned folder.      
+3. Run the following command in **terminal A**:
+```
 python simplaex_file_processor.py
-3. Run the following command in termial B:
+```
+3. Run the following command in **terminal B**:
+```
 java -jar producer.jar --tcp
-4. Stop both terminals to view the results. The results will be under the result folder (~/simplaex_file_processor/result/)
+```
+4. Stop both the terminals to view the result. The result csvs' will be under the **result** folder.  
+   (**~/simplaex_file_processor/result/**). Each file has the format **timestamp.csv.**
 
