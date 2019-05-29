@@ -5,7 +5,7 @@ import datetime
 
 PORT = 9000
 BUFFER = 1000
-resultFolder = "./result/"
+resultFolder = "result"
 data = []
 
 
@@ -20,7 +20,7 @@ def getConnection():
 
 # Process data
 def processData(tabdata):
-    filepath = resultFolder + str(datetime.datetime.now()) + ".csv"
+    filepath = resultFolder + "/" + str(datetime.datetime.now()) + ".csv"
     f = open(filepath, "w+")
     user_dic = {}
     sum_5 = 0
@@ -48,7 +48,7 @@ def process(str):
         data.append(rec)
         if len(data) == BUFFER:
             processData(data)
-            data.clear()
+            data = []
     return sp[-1]
 
 
@@ -58,7 +58,8 @@ def start():
         conn = getConnection()
         print("Connection established..")
         # create result folder
-        shutil.rmtree(resultFolder)
+        if os.path.isdir(resultFolder):
+            shutil.rmtree(resultFolder)
         os.mkdir(resultFolder)
 
         str = ""
@@ -74,3 +75,4 @@ def start():
 
 if __name__ == "__main__":
     start()
+
