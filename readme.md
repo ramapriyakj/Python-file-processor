@@ -1,4 +1,4 @@
-# Simplaex File Processor
+# Python file processor
 
 ## Steps to run the code:
 1. Download all the files in this repository to a folder in your local machine.  
