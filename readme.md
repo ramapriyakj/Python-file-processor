@@ -1,5 +1,9 @@
 # Python file processor
 
+The project demonstrates how to consume and process data generated from tcp using python.
+The producer.jar generates customer data. The simplaex_file_processor.py consumes the tcp data produced by producer.jar and generates csv files 
+containg summary of customer data in batches.
+
 ## Steps to run the code:
 1. Download all the files in this repository to a folder in your local machine.  
    (let us say all the files are under **~/simplaex-master/** folder).
